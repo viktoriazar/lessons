@@ -1,0 +1,156 @@
+.wrapper {
+    overflow: hidden;
+    position: relative;
+    min-height: 100%;
+}
+.header {
+    width: 100%;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(109, 46, 255);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+.header__container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.menu__item {
+    display: inline-block;
+}
+.menu__item:not(:last-child){
+    margin-right: 10px;
+}
+.car {
+    width: 100%;
+    height: 768px;
+    background: center / cover no-repeat url(../img/road.jpg) ;
+}
+.car__container{
+    width: 480px;
+    height: 200px;
+    position: relative;
+    top: 59%;
+    left: 35%;
+}
+.car__window {
+    width: 250px;
+    height: 70px;
+    border-radius: 60% 40% 0% 0% / 100% 100% 0% 0% ;
+    background-color: aquamarine;
+    position: relative;
+    left: 130px;
+    top: 15px;
+    z-index: 4;
+    transition: all 1.5s;
+}
+.car__window:hover,
+.car__window:target{
+    width: 100px;
+    top: 5px;
+    border-radius: 100% 0% 50% 50% / 100% 100% 0% 0% ;
+    transform: rotate(360deg)
+}
+.car__body{
+    z-index: 6;
+}
+.car__main-body {
+    width: 480px;
+    height: 80px;
+    border-radius: 100px 100px 0 0;
+    background-color: rgb(209, 0, 0);
+    position: relative;
+    z-index: 5;
+}
+.car__main-body:hover,
+.car__main-body:target{
+    box-shadow: 0px 10px 10px 0px rgba(234, 0, 255, 0.7);
+}
+.car__door {
+    width: 140px;
+    height: 73px;
+    border-radius: 0 0 0 50px;
+    background-color: rgb(209, 0, 0);
+    border: solid 3px rgb(100, 0, 0);
+    position: relative;
+    left: 135px;
+    bottom: 105px;
+    z-index: 10;
+}
+.car__door:hover,
+.car__door:target{
+    width: 120px;
+    background-color: rgb(255, 0, 0);
+    box-shadow: 15px 0px rgb(51, 0, 0);
+}
+.car__handle {
+    width: 20px;
+    height: 8px;
+    border-radius: 0 0 0 50px;
+    background-color: rgb(100, 0, 0);
+    position: relative;
+    left: 100px;
+    top: 15px;
+}
+.car__door:hover .car__handle,
+.car__door:target .car__handle{
+    left: 80px;
+}
+.wheel__body {
+    display: inline-block;
+    z-index: 7;
+}
+.wheel__body--left {
+    position: relative;
+    left: 35px;
+    bottom: 185px;
+}
+.wheel__body--right {
+    position: relative;
+    left: 260px;
+    bottom: 185px;
+}
+.wheel__shape {
+    width: 100px;
+    height: 50px;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0% ;
+    background: rgb(255,145,145);
+    background: linear-gradient(145deg, rgba(255,145,145,1) 0%, rgba(209,0,0,1) 56%);
+}
+.wheel__black {
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 40%, rgba(156,156,156,1) 50%, rgba(0,0,0,1) 54%);
+    outline: dashed rgb(0,0,0);
+    position: relative;
+    top: 25px;
+    left: 16px;
+    z-index: 9;
+    transition: all 1.5s;
+}
+.wheel__black:hover,
+.wheel__black:target{
+    width: 80px;
+    height: 80px;
+    top: 25px;
+    left: 11px;
+    transform: rotate(360deg);
+}
+.car__light {
+    width: 35px;
+    height: 25px;
+    border-radius: 100px 0% 0% 0% ;
+    background-color: rgb(255, 240, 104);
+    position: relative;
+    bottom: 55px;
+    left: 6px;
+    z-index: 8;
+}
+.car__light:hover,
+.car__light:target{
+    box-shadow: -30px 0px 20px 50px rgba(255, 240, 104, .5);
+}
