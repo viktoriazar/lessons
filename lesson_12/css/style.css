@@ -1,0 +1,193 @@
+.wrapper {
+    overflow: hidden;
+    position: relative;
+    min-height: 100%;
+}
+.header {
+    width: 100%;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(109, 46, 255);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+.header__container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.menu__item {
+    display: inline-block;
+}
+.menu__item:not(:last-child){
+    margin-right: 10px;
+}
+.car {
+    width: 100%;
+    height: 768px;
+    background: center / cover no-repeat url(../img/road.jpg) ;
+    transition: all 2s;
+}
+.car:target{
+    background: center / cover no-repeat url(../img/road2.jpg) ;
+}
+.car:target .car__container{
+    transform: skew(-180deg, 0deg) translate(45%,55%) scale(0.8);
+}
+.car:target .car__ufo{
+    opacity: 1;
+
+}
+.car__ufo{
+    position: relative;
+    top: 15%;
+    left: 20%;
+    opacity: 0;
+    transition: all 0s 1s;
+}
+.ufo{
+    perspective: 500px;
+    transform-style: preserve-3d;
+}
+.ufo__plate{
+    width: 150px;
+    height: 150px;
+    background: center / 150px 150px no-repeat url(../img/ufo.png) ;
+    
+    transform-style: preserve-3d;
+    transition: transform 2s 2s, rotate 2s 1s, opacity 1s 3s;
+}
+.ufo__plate:hover{
+    transform: translate3d(800px, 10px, 500px) rotate(60deg);
+    opacity: 0;
+}
+.ufo__plate:hover .ufo__cow{
+    transform: rotate3d(1, 10, 0, 1500deg) translate(0px, -100px);
+    opacity: 0;
+}
+.ufo__cow{
+    width: 100px;
+    height: 90px;
+    background: center / 100px 90px no-repeat url(../img/cow.png) ;
+    position: relative;
+    top: 190px;
+    left: 40px;
+    transition: transform 2s, opacity 0.5s 1.5s;
+}
+.car__container{
+    width: 480px;
+    height: 200px;
+    position: relative;
+    top: 59%;
+    left: 35%;
+    transition: all 2s;
+}
+.car__window {
+    width: 250px;
+    height: 70px;
+    border-radius: 60% 40% 0% 0% / 100% 100% 0% 0% ;
+    background-color: aquamarine;
+    position: relative;
+    left: 130px;
+    top: 15px;
+    transition: all 1.5s;
+}
+.car__window:hover,
+.car__window:target{
+    transform: rotate(530deg) translate(-350px,-130px);
+}
+.car__body{}
+
+.car__main-body {
+    width: 480px;
+    height: 80px;
+    border-radius: 100px 100px 0 0;
+    background-color: rgb(209, 0, 0);
+    position: relative;
+}
+.car__main-body:hover,
+.car__main-body:target{
+    box-shadow: 0px 10px 10px 0px rgba(234, 0, 255, 0.7);
+}
+.car__door {
+    width: 140px;
+    height: 73px;
+    border-radius: 0 0 0 50px;
+    background-color: rgb(255, 107, 107);
+    border: solid 3px rgb(100, 0, 0);
+    box-shadow: 0px 0px rgb(51, 0, 0);
+    position: relative;
+    left: 135px;
+    bottom: 105px;
+    transition: all 2s;
+}
+.car__door:hover,
+.car__door:target{
+    transform-origin: 10px 5px;
+    transform: rotate3d(-1, 0.3, -0.7, 60deg);
+}
+.car__handle {
+    width: 20px;
+    height: 8px;
+    border-radius: 0 0 0 50px;
+    background-color: rgb(100, 0, 0);
+    position: relative;
+    left: 100px;
+    top: 15px;
+}
+.car__door:hover .car__handle,
+.car__door:target .car__handle{
+    left: 80px;
+}
+.wheel__body {
+    display: inline-block;
+}
+.wheel__body--left {
+    position: relative;
+    left: 35px;
+    bottom: 185px;
+}
+.wheel__body--right {
+    position: relative;
+    left: 260px;
+    bottom: 185px;
+}
+.wheel__shape {
+    width: 100px;
+    height: 50px;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0% ;
+    background: rgb(255,145,145);
+    background: linear-gradient(145deg, rgba(255,145,145,1) 0%, rgba(209,0,0,1) 56%);
+}
+.wheel__black {
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 40%, rgba(156,156,156,1) 50%, rgba(0,0,0,1) 54%);
+    outline: dashed rgb(0,0,0);
+    position: relative;
+    top: 25px;
+    left: 16px;
+    transition: transform 2s cubic-bezier(.26,.21,1,-0.46), opacity 1s 2s, visibility 1s 2s;
+}
+.wheel__black:hover,
+.wheel__black:target{
+    transform: rotate(1800deg) scale(25);
+    opacity: 0;
+    visibility: hidden;
+}
+.car__light {
+    width: 35px;
+    height: 25px;
+    border-radius: 100px 0% 0% 0% ;
+    background-color: rgb(255, 240, 104);
+    position: relative;
+    bottom: 55px;
+    left: 6px;
+}
+.car__light:hover,
+.car__light:target{
+    box-shadow: -30px 0px 20px 50px rgba(255, 240, 104, .5);
+}
