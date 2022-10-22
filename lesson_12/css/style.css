@@ -105,10 +105,13 @@
     border-radius: 100px 100px 0 0;
     background-color: rgb(209, 0, 0);
     position: relative;
+    backface-visibility: hidden;
+    transition: all 2s;
 }
 .car__main-body:hover,
 .car__main-body:target{
     box-shadow: 0px 10px 10px 0px rgba(234, 0, 255, 0.7);
+    transform: rotateY(180deg);
 }
 .car__door {
     width: 140px;
