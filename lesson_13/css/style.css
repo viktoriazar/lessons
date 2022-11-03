@@ -1,0 +1,1250 @@
+@font-face {
+    font-family: 'Scriptorama';
+    src: url('../fonts/Scriptorama.woff2') format('woff2'),
+        url('../fonts/Scriptorama.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HansHand';
+    src: url('../fonts/HansHand-_cyr.woff2') format('woff2'),
+        url('../fonts/HansHand-_cyr.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+.wrapper {
+    overflow: hidden;
+    position: relative;
+    height: 650px;
+    background: no-repeat center/cover url(../img/start.jpg);
+    font-family: "HansHand";
+}
+.start {
+    width: 100%;
+    min-height: 650px;
+}
+.start__text {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    left: 50%;
+    top: 100px;
+    margin-left: -600px;
+    animation: start 5s linear 1;
+}
+@keyframes start {
+    0%{
+        width: 0px;
+    }
+    20%{
+        width: 0px;
+    }
+    100%{
+        width: 100%;
+    }
+}
+.start__text p {
+    font: 600 64px "Scriptorama";
+    text-align: center;
+    height: 200px;
+    width: 1200px;
+    color: rgb(63, 13, 16);
+}
+.start__buttons {
+    text-align: center;
+    position: relative;
+    top: 100px;
+    opacity: 0;
+    animation: opacity 1s linear 5s 1 forwards;
+}
+.start__buttons :not(:last-child){
+    margin-right: 10%;
+    
+}
+.start__buttons a {
+    font-weight: 600;
+    font-size: 36px;
+    color: rgb(63, 13, 16);
+    font-size: 52px;
+    display: inline-block;
+    transition: all 0.3s;
+}
+.start__buttons a:hover {
+    transform: scale(1.2);
+    color: rgb(100, 13, 16);
+}
+.start__buttons a:active{
+    transform: scale(1.1);
+    color: rgb(50, 13, 16);
+    
+}
+@keyframes opacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.map {
+}
+.map__main {
+
+}
+.map__cover {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    top: 0px;
+    width: 100%;
+    min-height: 650px;
+    transition: all 3s 1s;
+    perspective: 1000px;
+}
+.map__cover:target{
+    opacity: 1;
+    visibility: visible;
+}
+.map__cover:hover .map__left-cover {
+    transform: rotate3d(0, 1, 0, -20deg);
+}
+.map__cover:hover .map__right-cover {
+    transform: rotate3d(0, 1, 0, 20deg);
+}
+.map__left-cover {
+    width: 50%;
+    height: 100%;
+    background: no-repeat center/100% 100% url(../img/cover-left.jpg);
+    position: absolute;
+    top: 0;
+    transform-origin: 0 50%;
+    transition: transform 1s 0.5s;
+}
+.map__right-cover {
+    width: 50%;
+    height: 100%;
+    background: no-repeat center/100% 100% url(../img/cover-right.jpg);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: 100% 50%;
+    transition: transform 1s 0.5s;
+}
+.map__cover a{
+    display: block;
+    width: 200px;
+    height: 650px;
+    font-size: 18px;
+    color: rgb(214, 175, 96);
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(63, 13, 16,1) 0%, rgba(0,0,0,1) 75%);
+    position: relative;
+    left: 50%;
+    margin-left: -100px;
+    text-align: center;
+    padding-top: 25%;
+    transition: all 0.5s;
+}
+.map__cover a:hover{
+    font-size: 24px;
+}
+.map__cover a:active{
+    font-size: 20px;
+    color: rgb(192, 150, 66);
+}
+.map__page{
+    width: 100%;
+    height: 650px;
+    background: no-repeat center/100% 100% url(../img/map-main.jpg);
+    opacity: 0;
+}
+.map__page:target{
+    animation: opacity 3s linear 1 forwards;
+}
+.map__people {
+}
+.people {
+}
+.people__person {
+    position: absolute;
+    transition: scale 0.5s;
+}
+.people__person:hover {
+    scale: 1;
+}
+.people__person--1 {
+    animation: person-1 100s linear infinite alternate;
+    scale: 0.5;
+    top: 1150px;
+    left: 250px;
+}
+@keyframes person-1 {
+    0%{
+        opacity: 0;
+        rotate: -30deg;
+    }
+    10%{
+        opacity: 1;
+        rotate: -60deg;
+        translate: 5px -70px;
+    }
+    20%{
+        rotate: 60deg;
+        translate: 50px 0px;
+    }
+    25%{
+        rotate: 0deg;
+        translate: 60px 0px;
+    }
+    35%{
+        rotate: -10deg;
+        translate: 150px -10px;
+    }
+    50%{
+        rotate: -90deg;
+        translate: 300px -10px;
+    }
+    60%{
+        rotate: -10deg;
+        translate: 300px -100px;
+    }
+    65%{
+        rotate: -90deg;
+        translate: 400px -150px;
+    }
+    70%{
+        rotate: -10deg;
+        translate: 400px -150px;
+    }
+    75%{
+        rotate: 90deg;
+        translate: 500px -150px;
+    }
+    80%{
+        rotate: -10deg;
+        translate: 500px -100px;
+    }
+    90%{
+        rotate: -90deg;
+        translate: 600px -200px;
+        opacity: 1;
+    }
+    95%{
+        opacity: 0.5;
+        rotate: 0deg;
+            translate: 700px -250px;
+    }
+    100%{
+            opacity: 0;
+            rotate: 0deg;
+            translate: 700px -250px;
+        }
+}
+.people__frame--1 {
+    width: 300px;
+    height: 70px;
+    background: no-repeat 0 0/ 250px 70px url(../img/frame-1.png);
+}
+.people__name {
+    width: 200px;
+    height: 50px;
+    font: 400 18px "HansHand";
+    position: relative;
+    top: 15px;
+    left: 65px;
+}
+.people__footprint {
+    width: 297px;
+    height: 100%;
+    animation: footprints 3s steps(5, end) infinite forwards;
+}
+.people__left {
+    width: 297px;
+    height: 16px;
+    position: relative;
+    background: no-repeat 0 0/ 150px 8px url(../img/footprint-l.png);
+    animation: footprint 3s steps(5, end) infinite 0.15s forwards;
+}
+.people__right {
+    width: 297px;
+    height: 16px;
+    position: relative;
+    background: no-repeat 20px 0/ 150px 8px url(../img/footprint-r.png);;
+    animation: footprint 3s steps(5, end) infinite  forwards;
+}
+@keyframes footprint {
+    0%{
+        left: -20px;
+    }
+    100%{
+        left: 200px;
+    }
+}
+.people__person--2{
+    animation: person-2 120s linear infinite alternate;
+    scale: 0.5;
+    top: 850px;
+    left: 250px;
+}
+@keyframes person-2 {
+    0%{
+        opacity: 0;
+        rotate: 0deg;
+        translate: 0px 0px;
+    }
+    5%{
+        opacity: 1;
+        rotate: 10deg;
+        translate: 50px 10px;
+    }
+    10%{
+        rotate: -60deg;
+        translate: 50px -50px;
+    }
+    15%{
+        rotate: 0deg;
+        translate: 170px -50px;
+    }
+    20%{
+        rotate: 90deg;
+        translate: 200px 0px;
+    }
+    25%{
+        rotate: 0deg;
+        translate: 220px 60px;
+    }
+    30%{
+        rotate: -10deg;
+        translate: 300px 30px;
+    }
+    35%{
+        rotate: 90deg;
+        translate: 300px 80px;
+    }
+    40%{
+        rotate: -20deg;
+        translate: 400px 70px;
+    }
+    45%{
+        rotate: -90deg;
+        translate: 400px 20px;
+    }
+    50%{
+        rotate: -190deg;
+        translate: 400px 10px;
+    }
+    55%{
+        rotate: -280deg;
+        translate: 280px 10px;
+        opacity: 1;
+    }
+    60%{
+        rotate: -370deg;
+        translate: 300px 150px;
+    }
+65%{
+        rotate: -350deg;
+        translate: 200px 180px;
+}
+70%{
+        rotate: -280deg;
+        translate: 190px 150px;
+}
+75%{
+    rotate: -370deg;
+    translate: 180px 60px;
+}
+80%{
+    rotate: -370deg;
+    translate: 100px 80px;
+}
+85%{
+    rotate: -400deg;
+    translate: 10px 120px;
+}
+90%{
+    rotate: -390deg;
+    translate: 20px 120px;
+    opacity: 1;
+}
+100%{
+    rotate: -370deg;
+    translate: 10px 150px;
+    opacity: 0;
+}
+}
+.people__frame--2 {
+    width: 300px;
+    height: 70px;
+    background: no-repeat 0 0/ 250px 70px url(../img/frame-2.png);
+}
+.people__person--3{
+    animation: person-3 220s linear infinite alternate;
+    scale: 0.5;
+    top: 800px;
+    left: 600px;
+}
+@keyframes person-3 {
+    0%{
+        opacity: 1;
+        rotate: 10deg;
+        translate: 10px 0px;
+    }
+    5%{
+        opacity: 1;
+        rotate: 90deg;
+        translate: 50px 100px;
+    }
+    10%{
+        rotate: 180deg;
+        translate: 0px 150px;
+    }
+    15%{
+        rotate: 90deg;
+        translate: -10px 200px;
+    }
+    20%{
+        rotate: 180deg;
+        translate: -100px 250px;
+    }
+    25%{
+        rotate: 270deg;
+        translate: -200px 300px;
+    }
+    30%{
+        rotate: 220deg;
+        translate: -200px 220px;
+    }
+    35%{
+        rotate: 180deg;
+        translate: -250px 150px;
+    }
+    40%{
+        rotate: 130deg;
+        translate: -300px 200px;
+    }
+    45%{
+        rotate: 150deg;
+        translate: -350px 220px;
+    }
+    50%{
+        rotate: 180deg;
+        translate: -400px 250px;
+    }
+    55%{
+        rotate: 260deg;
+        translate: -450px 220px;
+        opacity: 1;
+    }
+    60%{
+        rotate: 300deg;
+        translate: -460px 180px;
+    }
+65%{
+        rotate: 340deg;
+        translate: -400px 120px;
+}
+70%{
+        rotate: 350deg;
+        translate: -350px 50px;
+}
+75%{
+    rotate: 360deg;
+    translate: -250px 0px;
+}
+80%{
+    rotate: 450deg;
+    translate: -150px 50px;
+}
+85%{
+    rotate: 400deg;
+    translate: -100px 100px;
+}
+90%{
+    rotate: 390deg;
+    translate: -120px 120px;
+    opacity: 1;
+}
+100%{
+    rotate: 390deg;
+    translate: -110px 150px;
+    opacity: 0;
+}
+}
+.people__frame--3 {
+    width: 300px;
+    height: 70px;
+    background: no-repeat 0 0/ 250px 70px url(../img/frame-3.png);
+}
+.people__frame--3 .people__name{
+    position: relative;
+    top: 0;
+    left: 50px;
+}
+.url-cabinets div{
+    position: absolute;
+    opacity: 0.2;
+    font: 700 24px 'Scriptorama', sans-serif;
+    border-radius: 50%;
+    transition: all 0.3s;
+    color: rgb(50, 13, 16);
+}
+.url-cabinets div:hover{
+    opacity: 1;
+    scale: 1.1;
+    background-color: rgba(245, 245, 220, 0.4);
+    box-shadow: 0 0 40px beige;
+}
+.url-cabinets div:hover .url-cabinets__square{
+    outline: rgb(50, 13, 16) 2px solid;
+}
+.url-cabinets__potion {
+    top: 920px;
+    left: 410px;
+}
+.url-cabinets__square{
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 15px auto;
+    outline: rgb(50, 13, 16) 5px solid;
+    animation: rotation 10s linear infinite forwards;
+    transition: all 0.3s;
+}
+@keyframes rotation {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+.cabinets {
+}
+
+.cabinets__potion {
+    
+    width: 100%;
+    height: 650px;
+    background: no-repeat 0 0/cover url(../img/potion-cab.jpg);
+}
+.cabinets__potion:target{
+    visibility: visible;
+    animation: opacity 1s linear forwards;
+}
+.potion-cab {
+    position: relative;
+    top: 0 0;
+}
+.potion-cab__game {
+    width: 100%;
+    height: 650px;
+    background-color: rgba(175, 175, 175, 0.5);
+    border: 0px ridge rgb(59, 59, 59, 0);
+    position: relative;
+    top: 0%;
+    left: 0%;
+}
+.main-game{
+    width: 90%;
+    height: 550px;
+    position: absolute;
+}
+.main-game { opacity: 0;
+}
+.main-game:target{
+    animation: opacity 2s linear forwards;
+}
+.flask {
+    display: inline-block;
+    position: relative;
+    top: 10%;
+    left: 25%;
+    margin-left: 0%;
+    width: 150px;
+    height: 250px;
+    background: no-repeat center/100% auto url(../img/flask.png);
+    transition: all 0.5s;
+}
+.flask:hover{
+    rotate: 20deg;
+}
+.flask:active{
+    scale: 0.9;
+    rotate: 40deg;
+}
+.flask-yellow::before{
+    content: "";
+    display: inline-block;
+    width: 140px;
+    height: 70px;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0% ;
+    background-color: rgba(255, 255, 0, 0.5);
+    position: relative;
+    top: 145px;
+    left: 5px;
+    /*position: relative;
+    top: 30px;*/
+}
+.flask-green::before {
+    content: "";
+    display: inline-block;
+    width: 140px;
+    height: 70px;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0% ;
+    background-color: rgba(0, 128, 0, 0.5);
+    position: relative;
+    top: 145px;
+    left: 5px;
+}
+.flask-blue::before {
+    content: "";
+    display: inline-block;
+    width: 140px;
+    height: 70px;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0% ;
+    background-color: rgba(0, 0, 255, 0.5);
+    position: relative;
+    top: 145px;
+    left: 5px;
+}
+.flask-red::before {
+    content: "";
+    display: inline-block;
+    width: 140px;
+    height: 70px;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0% ;
+    background-color: rgba(255, 0, 0, 0.5);
+    position: relative;
+    top: 145px;
+    left: 5px;
+}
+.flask-empty{
+    top: 35%;
+}
+.card{
+    width: 100%;
+    height: 650px;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+.card:target{
+    animation: opacity 2s linear forwards;
+}
+.card-yellow{
+}
+.card-green
+.card-blue
+.card-red
+.results div{
+    width: 100%;
+    height: 550;
+    display: none;
+    position: absolute;
+}
+.results div:target{
+    display: block;
+}
+@keyframes flask--left {
+    0%{
+        rotate: 0deg;
+        translate: 0px 0px;
+    }
+    100%{
+        rotate: 80deg;
+        translate: 50px -50px;
+    }
+}
+@keyframes flask--right {
+    0%{
+        rotate: 0deg;
+        translate: 0px 0px;
+    }
+    100%{
+        rotate: -80deg;
+        translate: -50px -50px;
+    }
+}
+@keyframes result--after {
+    0%{
+        opacity: 0;
+        
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        translate: -100% -100%;
+    }
+}
+@keyframes result-flask {
+    10%{
+        rotate: 20deg;
+    }
+    20%{
+        scale: 1.05;
+        rotate: -20deg;
+    }
+    30%{
+        scale: 1.075;
+        rotate: 20deg;
+    }
+    40%{
+        scale: 1.1;
+        rotate: -20deg;
+    }
+    50%{
+        scale: 1.125;
+        rotate: 20deg;
+    }
+    60%{
+        scale: 1.15;
+        rotate: -20deg;
+    }
+    70%{
+        scale: 1.175;
+        rotate: 20deg;
+    }
+    80%{
+        scale: 1.2;
+        rotate: -20deg;
+    }
+    90%{
+        scale: 1.225;
+        rotate: 20deg;
+    }
+    100%{
+        scale: 1.25;
+        rotate: 0deg;
+    }
+}
+@keyframes result-before-yy {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 0;
+    }
+    90%{
+        background-color: rgba(255, 255, 0, 0.5);
+    }
+    100%{
+        opacity: 1;
+        height: 140px;
+        translate: 0 -70px;
+        background-color: rgba(255, 72, 0, 0.5);
+    }
+}
+@keyframes result-before-yg {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 0;
+    }
+    90%{
+        background-color: rgba(166, 255, 0, 0.5);
+    }
+    100%{
+        opacity: 1;
+        height: 140px;
+        translate: 0 -70px;
+        background-color: rgba(0, 255, 255, 0.5);
+    }
+}
+@keyframes result-before-yb {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 0;
+    }
+    90%{
+        background-color: rgba(0, 255, 85, 0.5);
+    }
+    100%{
+        opacity: 1;
+        height: 140px;
+        translate: 0 -70px;
+        background-color: rgba(0, 255, 13, 0.5);
+    }
+}
+@keyframes result-before-yr {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 0;
+    }
+    90%{
+        background-color: rgba(255, 51, 0, 0.5);
+    }
+    100%{
+        opacity: 1;
+        height: 140px;
+        translate: 0 -70px;
+        background-color: rgba(255, 0, 0, 0.5);
+    }
+}
+@keyframes result-before-gg {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 0;
+    }
+    90%{
+        background-color: rgba(94, 255, 0, 0.5);
+    }
+    100%{
+        opacity: 1;
+        height: 140px;
+        translate: 0 -70px;
+        background-color: rgba(7, 202, 0, 0.5);
+    }
+}
+@keyframes result-before-gb {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 0;
+    }
+    90%{
+        background-color: rgba(0, 255, 179, 0.5);
+    }
+    100%{
+        opacity: 1;
+        height: 140px;
+        translate: 0 -70px;
+        background-color: rgba(200, 255, 0, 0.5);
+    }
+}
+@keyframes result-before-gr {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 0;
+    }
+    90%{
+        background-color: rgba(0, 174, 255, 0.5);
+    }
+    100%{
+        opacity: 1;
+        height: 140px;
+        translate: 0 -70px;
+        background-color: rgba(111, 0, 255, 0.5);
+    }
+}
+@keyframes result-before-bb {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 0;
+    }
+    90%{
+        background-color: rgba(0, 60, 255, 0.5);
+    }
+    100%{
+        opacity: 1;
+        height: 140px;
+        translate: 0 -70px;
+        background-color: rgba(0, 140, 255, 0.5);
+    }
+}
+@keyframes result-before-br {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 0;
+    }
+    90%{
+        background-color: rgba(140, 0, 255, 0.5);
+    }
+    100%{
+        opacity: 1;
+        height: 140px;
+        translate: 0 -70px;
+        background-color: rgba(225, 0, 255, 0.5);
+    }
+}
+@keyframes result-before-rr {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 0;
+    }
+    90%{
+        background-color: rgba(255, 0, 0, 0.5);
+    }
+    100%{
+        opacity: 1;
+        height: 140px;
+        translate: 0 -70px;
+        background-color: rgba(255, 0, 43, 0.5);
+    }
+}
+div[class^="results__"]{
+    width: 90%;
+    height: 550px;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    display: none;
+}
+div[class^="results__"]:target{display: block;}
+
+.results .flask-empty{
+    top: 25%;
+}
+.flask--left{
+    animation: flask--left 2s linear 2 alternate;
+}
+
+.flask--right{
+    animation: flask--right 2s linear 2 alternate;
+}
+.flask--result-yy::before{
+    background-color: rgba(255, 255, 0, 0.5);
+    animation: result-before-yy 2s linear 2s 1 forwards;
+    content: "";
+    display: inline-block;
+    width: 140px;
+    height: 70px;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0% ;
+    position: relative;
+    top: 145px;
+    left: 5px;
+    opacity: 0;
+}
+.flask--result-yy::after{
+    content: "Зілля чарівності! +10 до харизми";
+    position: absolute;
+    color:rgb(22, 5, 36);
+    font-size: 42px;
+    font-weight: 600;
+    text-align: center;
+    background-color: beige;
+    border-radius: 20px;
+    display: inline-block;
+    width: 400px;
+    opacity: 0;
+    animation: result--after 2s linear 4s 1 forwards;
+}
+.flask--result-yy{
+    animation: result-flask 2s linear 3s 1 forwards;
+}
+.flask--result-yg::before{
+    background-color: rgba(166, 255, 0, 0.5);
+    content: "";
+    display: inline-block;
+    width: 140px;
+    height: 70px;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0% ;
+    position: relative;
+    top: 145px;
+    left: 5px;
+    opacity: 0;
+    animation: result-before-yg 2s linear 2s 1 forwards;
+}
+.flask--result-yg::after{
+    content: "Зілля прискоренного навчання! +10 годин вільного часу";
+    position: absolute;
+    color:rgb(22, 5, 36);
+    font-size: 42px;
+    font-weight: 600;
+    text-align: center;
+    background-color: beige;
+    border-radius: 20px;
+    display: inline-block;
+    width: 400px;
+    opacity: 0;
+    animation: result--after 2s linear 4s 1 forwards;
+}
+.flask--result-yg{
+    animation: result-flask 2s linear 3s 1 forwards;
+}
+.flask--result-yb::before{
+    background-color: rgba(0, 255, 85, 0.5);
+    content: "";
+    display: inline-block;
+    width: 140px;
+    height: 70px;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0% ;
+    position: relative;
+    top: 145px;
+    left: 5px;
+    opacity: 0;
+    animation: result-before-yb 2s linear 2s 1 forwards;
+}
+.flask--result-yb::after{
+    content: "Зілля невидимості! +1 безкоштовний сеанс кіно";
+    position: absolute;
+    color:rgb(22, 5, 36);
+    font-size: 42px;
+    font-weight: 600;
+    text-align: center;
+    background-color: beige;
+    border-radius: 20px;
+    display: inline-block;
+    width: 400px;
+    opacity: 0;
+    animation: result--after 2s linear 4s 1 forwards;
+}
+.flask--result-yr{
+    animation: result-flask 2s linear 3s 1 forwards;
+}
+.flask--result-yr::before{
+    background-color: rgba(255, 51, 0, 0.5);
+    content: "";
+    display: inline-block;
+    width: 140px;
+    height: 70px;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0% ;
+    position: relative;
+    top: 145px;
+    left: 5px;
+    opacity: 0;
+    animation: result-before-yr 2s linear 2s 1 forwards;
+}
+.flask--result-yr::after{
+    content: "Зілля кохання! -20 нервових клітин";
+    position: absolute;
+    color:rgb(22, 5, 36);
+    font-size: 42px;
+    font-weight: 600;
+    text-align: center;
+    background-color: beige;
+    border-radius: 20px;
+    display: inline-block;
+    width: 400px;
+    opacity: 0;
+    animation: result--after 2s linear 4s 1 forwards;
+}
+.flask--result-yr{
+    animation: result-flask 2s linear 3s 1 forwards;
+}
+.flask--result-gg::before{
+    background-color: rgba(94, 255, 0, 0.5);
+    content: "";
+    display: inline-block;
+    width: 140px;
+    height: 70px;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0% ;
+    position: relative;
+    top: 145px;
+    left: 5px;
+    opacity: 0;
+    animation: result-before-gg 2s linear 2s 1 forwards;
+}
+.flask--result-gg::after{
+    content: "Зілля соплей! +20 антитіл від ковіду";
+    position: absolute;
+    color:rgb(22, 5, 36);
+    font-size: 42px;
+    font-weight: 600;
+    text-align: center;
+    background-color: beige;
+    border-radius: 20px;
+    display: inline-block;
+    width: 400px;
+    opacity: 0;
+    animation: result--after 2s linear 4s 1 forwards;
+}
+.flask--result-gg{
+    animation: result-flask 2s linear 3s 1 forwards;
+}
+.flask--result-gb::before{
+    background-color: rgba(0, 255, 179, 0.5);
+    content: "";
+    display: inline-block;
+    width: 140px;
+    height: 70px;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0% ;
+    position: relative;
+    top: 145px;
+    left: 5px;
+    opacity: 0;
+    animation: result-before-gb 2s linear 2s 1 forwards;
+}
+.flask--result-gb::after{
+    content: "Зілля вдачі! +1 мільйон з лото забави";
+    position: absolute;
+    color:rgb(22, 5, 36);
+    font-size: 42px;
+    font-weight: 600;
+    text-align: center;
+    background-color: beige;
+    border-radius: 20px;
+    display: inline-block;
+    width: 400px;
+    opacity: 0;
+    animation: result--after 2s linear 4s 1 forwards;
+}
+.flask--result-gb{
+    animation: result-flask 2s linear 3s 1 forwards;
+}
+.flask--result-gr::before{
+    background-color: rgba(0, 174, 255, 0.5);
+    content: "";
+    display: inline-block;
+    width: 140px;
+    height: 70px;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0% ;
+    position: relative;
+    top: 145px;
+    left: 5px;
+    opacity: 0;
+    animation: result-before-gr 2s linear 2s 1 forwards;
+}
+.flask--result-gr::after{
+    content: "Зілля відновлення одягу! +20 гривень економії на штанях";
+    position: absolute;
+    color:rgb(22, 5, 36);
+    font-size: 42px;
+    font-weight: 600;
+    text-align: center;
+    background-color: beige;
+    border-radius: 20px;
+    display: inline-block;
+    width: 400px;
+    opacity: 0;
+    animation: result--after 2s linear 4s 1 forwards;
+}
+.flask--result-gr{
+    animation: result-flask 2s linear 3s 1 forwards;
+}
+.flask--result-bb::before{
+    background-color: rgba(0, 60, 255, 0.5);
+    content: "";
+    display: inline-block;
+    width: 140px;
+    height: 70px;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0% ;
+    position: relative;
+    top: 145px;
+    left: 5px;
+    opacity: 0;
+    animation: result-before-bb 2s linear 2s 1 forwards;
+}
+.flask--result-bb::after{
+    content: "Зілля атлетизму! +2 кубика на пресі";
+    position: absolute;
+    color:rgb(22, 5, 36);
+    font-size: 42px;
+    font-weight: 600;
+    text-align: center;
+    background-color: beige;
+    border-radius: 20px;
+    display: inline-block;
+    width: 400px;
+    opacity: 0;
+    animation: result--after 2s linear 4s 1 forwards;
+}
+.flask--result-bb{
+    animation: result-flask 2s linear 3s 1 forwards;
+}
+.flask--result-br::before{
+    background-color: rgba(140, 0, 255, 0.5);
+    content: "";
+    display: inline-block;
+    width: 140px;
+    height: 70px;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0% ;
+    position: relative;
+    top: 145px;
+    left: 5px;
+    opacity: 0;
+    animation: result-before-br 2s linear 2s 1 forwards;
+}
+.flask--result-br::after{
+    content: "Зілля провидця! +2 віщих сни";
+    position: absolute;
+    color:rgb(22, 5, 36);
+    font-size: 42px;
+    font-weight: 600;
+    text-align: center;
+    background-color: beige;
+    border-radius: 20px;
+    display: inline-block;
+    width: 400px;
+    opacity: 0;
+    animation: result--after 2s linear 4s 1 forwards;
+}
+.flask--result-br{
+    animation: result-flask 2s linear 3s 1 forwards;
+}
+.flask--result-rr::before{
+    background-color: rgba(255, 0, 0, 0.5);
+    content: "";
+    display: inline-block;
+    width: 140px;
+    height: 70px;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0% ;
+    position: relative;
+    top: 145px;
+    left: 5px;
+    opacity: 0;
+    animation: result-before-rr 2s linear 2s 1 forwards;
+}
+.flask--result-rr::after{
+    content: "Зілля полтавського палія! +20 суєтящіхся людей навколо";
+    position: absolute;
+    color:rgb(22, 5, 36);
+    font-size: 42px;
+    font-weight: 600;
+    text-align: center;
+    background-color: beige;
+    border-radius: 20px;
+    display: inline-block;
+    width: 400px;
+    opacity: 0;
+    animation: result--after 2s linear 4s 1 forwards;
+}
+.flask--result-rr{
+    animation: result-flask 2s linear 3s 1 forwards;
+}
+
+.repeat{
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    color: rgb(50, 13, 16);
+    background-color: beige;
+    text-align: center;
+    padding-top: 10px;
+    position: absolute;
+    left: 15px;
+    bottom: 100px;
+    transition: all 0.3s;
+}
+.repeat:hover{
+    scale: 1.1;
+}
+.return{
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    color: rgb(50, 13, 16);
+    background-color: beige;
+    text-align: center;
+    padding-top: 10px;
+    position: absolute;
+    left: 15px;
+    bottom: 20px;
+    transition: all 0.3s;
+}
+.return:hover{
+    scale: 1.1;
+}
