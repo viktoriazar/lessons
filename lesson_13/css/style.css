@@ -27,7 +27,7 @@
 }
 .start__text {
     height: 200px;
-    width: 1200px;
+    width: 100%;
     overflow: hidden;
     position: relative;
     left: 50%;
@@ -50,7 +50,7 @@
     font: 600 64px "Scriptorama";
     text-align: center;
     height: 200px;
-    width: 100%;
+    width: 1200px;
     color: rgb(63, 13, 16);
 }
 .start__buttons {
