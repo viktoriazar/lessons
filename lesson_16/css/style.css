@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+.wrapper {
+    min-height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-family: "Lato";
+}
+.wrapper > main{
+    flex-grow: 1;
+}
+.header {
+}
+.main {
+}
+.form-block {
+}
+.form-block__container {
+    width: 1245px;
+    display: flex;
+    margin: 0 auto;
+    gap: 105px;
+}
+.form-block__img {
+    /*width: 435px;
+    height: 481px;*/
+    align-self: center;
+}
+.form-block__img img{
+}
+.form-block__content {
+}
+.form-block__title {
+    margin-bottom: 40px;
+    color: #1E212C;
+}
+.subtitle {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.title {
+    font-weight: 900;
+    font-size: 46px;
+    line-height: 130%;
+}
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 25px;
+}
+.form__line {
+    margin-bottom: 24px;
+    flex: 0 0 340px;
+}
+.form__label, .title-radio {
+    display: inline-block;
+    line-height: 160%;
+    color: #424551;
+    margin-bottom: 8px;
+}
+.form__input{
+    height: 52px;
+    color: #424551;
+    border: 1px solid #D7DADD;
+    border-radius: 4px;
+    padding: 13px 16px;
+}
+.form__input::placeholder {
+    color: #9A9CA5;
+}
+.form__input:focus{
+    outline: rgb(149, 151, 153) 1px solid;
+}
+.form__line--radio {
+    position: relative;
+}
+.title-radio {
+}
+.form__radio {
+}
+.form__input--radio {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+.form__input--radio:checked + .form__label--radio::before{
+    background: url(../img/check.sv) no-repeat center / 10px 8px, #FF3F3A;
+    border: #FF3F3A 1px solid;
+}
+.form__label--radio {
+    cursor: pointer;
+    display: inline-flex;
+    gap: 12px;
+}
+.form__label--radio::before{
+    content: "";
+    flex: 0 0 12px;
+    width: 12px;
+    height: 12px;
+    border: #FF3F3A 1px solid;
+    border-radius: 50%;
+    margin-top: 7px;
+    transition: border 0.3s ease;
+}
+.form__label--radio:hover::before{
+    border: /*#dc3f3a*/ #ca3530 1px solid;
+}
+.form__label--radio:active::before{
+    border: /*#dc3f3a*/ #a32b27 1px solid;
+}
+.form__line--area {
+    margin-bottom: 48px;
+}
+.form__input--area{
+    width: 705px;
+    height: 128px;
+    resize: none;
+}
+
+
+.form__label--checkbox {
+
+
+}
+.form__line--checkbox {
+    position: relative;
+}
+
+.form__input--checkbox{
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+.form__input--checkbox:focus + .form__label--checkbox::before{
+
+}
+
+.form__label--checkbox{
+    cursor: pointer;
+    display: inline-flex;
+    gap: 12px;
+}
+.form__label--checkbox::before{
+    content: "";
+    flex: 0 0 16px;
+    width: 16px;
+    height: 16px;
+    border: #FF3F3A 1px solid;
+    border-radius: 3px;
+    margin-top: 5px;
+    transition: border 0.3s ease;
+}
+.form__label--checkbox:hover::before{
+    border: /*#dc3f3a*/ #ca3530 1px solid;
+}
+.form__label--checkbox:active::before{
+    border: /*#dc3f3a*/ #a32b27 1px solid;
+}
+
+.form__input--checkbox:checked + .form__label--checkbox::before{
+    background: url(../img/check.svg) no-repeat center / 10px 8px, #FF3F3A;
+    border: #FF3F3A 1px solid;
+}
+.checkbox-text {
+    align-self: center;
+}
+.button{
+    background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+    border-radius: 4px;
+    width: 340px;
+    height: 52px;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+    position: relative;
+}
+.button::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease 0s;
+    opacity: 0;
+    border-radius: 4px;
+    background: linear-gradient(55.95deg, #df3b35 0%, #df5506 100%);
+}
+.button:hover::before {
+    opacity: 1;
+}
+.button:active::before {
+    opacity: 0;
+}
+.button::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease 0s;
+    opacity: 0;
+    border-radius: 4px;
+    background: linear-gradient(55.95deg, #ca3530 0%, #c94d05 100%);
+}
+.button:active::after {
+    opacity: 1;
+}
+.button span{
+    position: relative;
+    z-index: 2;
+}
