@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:regular,700,900&display=swap");
+body{
+    font-family: "Lato";
+	color: #424551;
+	font-size: 16px;
+}
+.wrapper{
+    /*overflow: hidden;*/
+	min-height: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+.wrapper > main{
+    flex-grow: 1;
+}
+[class*="__container"]{
+    width: 1260px;
+    margin: 0 auto;
+    padding: 0 15px 0 15px;
+}
+.header{
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+}
+.header__container{
+    display: flex;
+    align-items: center;
+}
+.header__logo{}
+.header__logo img{}
+.header__menu{
+    flex-grow: 1;
+}
+.menu{}
+.menu__list{
+    display: flex;
+    column-gap: 40px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+}
+.menu__item{}
+.menu__link{}
+
+.header__actions
+.actions-header{}
+.actions-header__button{}
+.button{}
+.button span{}
+.button--border{}
+.actions-header__auth{}
+.actions-header__auth span{}
+
+
+.page{
+    display: flex;
+    flex-direction: column;
+    gap: 180px;
+}
+.page__container{}
+
+.page__block{}
+.main-block{}
+.main-block__container{}
+.main-block__body{}
+.body-main{}
+.body-main__content{}
+.body-main__play{}
+.body-main__title{}
+.body-main__actions{}
+.body-main__button{}
+.body-main__button{}
+.body-main__media{}
+.body-main__image{}
+.main-block__advantages{}
+.advantages-main{}
+.advantages-main__item
+.item-advantages
+.item-advantages__value
+.item-advantages__text
+.advantages-main__circle
+.main-block__decor
+.decor-main
+.decor-main__item
+.decor-main__item--1
+.decor-main__item--2
+.decor-main__item--3
+.decor-main__item--4
+.decor-main__item--5
+.decor-main__item--6
+
+
+.why-block{}
+
+
+.courses-block{}
+
+
+.benefits-block{}
